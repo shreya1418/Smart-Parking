@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account"
+    android:background="@drawable/background">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/otp_card"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_above="@+id/login_card"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="Send OTP"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/Tv_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="5dp"
+                        android:text="1234567890"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/send_otp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Tv_number"
+                        android:layout_centerHorizontal="true"
+                        android:text="Send" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/panda"
+                android:layout_above="@+id/login_card"
+                android:layout_marginBottom="-150dp"
+                android:id="@+id/panda"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/login_card"
+                android:layout_width="match_parent"
+                android:layout_height="460dp"
+                android:layout_marginBottom="-40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:backgroundTint="#B1A1D1"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="10dp"
+                >
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt2"
+                        style="@style/TextAppearance.AppCompat.Body2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Create Account"
+                        android:textSize="25dp" />
+
+                    <EditText
+                        android:id="@+id/acc_Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/txt2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custom_et"
+                        android:hint="Name"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:textColor="#99ffffff"
+                        android:textColorHint="#99ffffff"
+                        android:elevation="18dp"
+                        />
+
+                    <EditText
+                        android:id="@+id/acc_Phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/acc_Name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/custom_et"
+                        android:hint="Phone"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:textColor="#99ffffff"
+                        android:textColorHint="#99ffffff" />
+
+                    <EditText
+                        android:id="@+id/acc_VehicleNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/acc_Phone"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/custom_et"
+                        android:hint="Vehicle Number"
+                        android:inputType="textCapCharacters"
+                        android:paddingLeft="10dp"
+                        android:textColor="#99ffffff"
+                        android:textColorHint="#99ffffff"
+                        android:layout_marginTop="10dp"
+
+                        />
+
+                    <EditText
+                        android:id="@+id/acc_Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/acc_VehicleNumber"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/custom_et"
+                        android:hint="Email (Optional)"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="10dp"
+                        android:textColor="#99ffffff"
+                        android:textColorHint="#99ffffff" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/acc_Email"
+                        android:id="@+id/l1"
+                        >
+                        <EditText
+                            android:id="@+id/acc_pass"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/acc_Email"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/custom_et"
+                            android:hint="Password"
+                            android:paddingLeft="10dp"
+                            android:textColor="#99ffffff"
+                            android:textColorHint="#99ffffff"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/eye"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="23dp"
+                            android:layout_marginRight="20dp"
+                            android:id="@+id/eyeOpen"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_panorama_fish_eye_24"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="23dp"
+                            android:layout_marginRight="20dp"
+                            android:visibility="gone"
+                            android:id="@+id/eyeClose"
+                            />
+
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/nextBtn"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/l1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#80625ad8"
+                        android:text="Next" />
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+       </RelativeLayout>
+
+</RelativeLayout>

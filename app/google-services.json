@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "236876402379",
+    "firebase_url": "https://parkkro-51823-default-rtdb.firebaseio.com",
+    "project_id": "parkkro-51823",
+    "storage_bucket": "parkkro-51823.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236876402379:android:b2022cea5159e0ebf4554e",
+        "android_client_info": {
+          "package_name": "com.example.parkkro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCghDXS8Yku1Zdnmg9T5jkWm9Irub_Auds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

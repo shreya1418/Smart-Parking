@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/baseline_directions_car_24"
+        android:title="Slots"
+
+        android:id="@+id/menu_Slots"
+
+        />
+    <item
+
+        android:id="@+id/menu_Washing"
+        android:title="Washing"
+        android:icon="@drawable/baseline_local_car_wash_24"
+        />
+    <item
+        android:title="Charging"
+        android:id="@+id/menu_Charging"
+        android:icon="@drawable/baseline_battery_charging_full_24"
+        />
+</menu>
