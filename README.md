@@ -22,27 +22,34 @@ An Android app for booking parking slots, built with Java and Firebase. Users si
 - **UI:** Android Views, CardView, ViewBinding, Material Components, BottomNavigationView
 - **Build system:** Gradle (Kotlin DSL — `build.gradle.kts`)
 
-## Project structure
+## How to Run
+1. Clone the repository
+```bash
+   git clone https://github.com/shreya-User/smart-parking-system.git
+   cd smart-parking-system
+```
+2. Open the `ParkKro` project folder in **Android Studio**
+3. Add your own `google-services.json` file (from Firebase Console) into the `app/` folder
+4. Set up a Razorpay account/API key for payment testing
+5. Let Gradle sync automatically
+6. Connect an Android device or start an emulator
+7. Click **Run** ▶ in Android Studio
 
-app/src/main/java/com/example/parkkro/
-├── Loding_page.java # Splash screen — routes to login or straight to slots for returning users
-├── Account.java # Registration/login: name, phone, vehicle number, triggers OTP
-├── verify_OTP.java # 6-digit OTP entry and Firebase verification
-├── Slots.java # Parking slot map, time picker, and navigation to add-on services
-├── MainActivity.java # Booking summary before payment
-├── Payment.java # Razorpay checkout and payment confirmation
-├── Charging.java # EV charging service options
-├── Wash.java # Car wash request / call-to-book
-├── User.java # Booking data model (type, time, slot, name, vehicle number, phone)
-└── MemoryData.java # Local file-based storage for the signed-in user's session data
+## Project Structure
+| File | Purpose |
+|------|---------|
+| `Loding_page.java` | Splash screen — routes to login or slots |
+| `Account.java` | Registration/login, sends OTP |
+| `verify_OTP.java` | OTP entry and verification |
+| `Slots.java` | Parking slot map and time picker |
+| `MainActivity.java` | Booking summary before payment |
+| `Payment.java` | Razorpay checkout and payment confirmation |
+| `Charging.java` | EV charging service options |
+| `Wash.java` | Car wash request/call |
+| `User.java` | Booking data model |
+| `MemoryData.java` | Saves session data on the device |
 
 
-## Setup
-
-1. Clone the repo and open the `ParkKro` folder in **Android Studio**.
-2. This project uses **Firebase** (Realtime Database, Phone Authentication) — add your own `google-services.json` from the Firebase console into `app/`.
-3. This project uses **Razorpay** for payments — you'll need a Razorpay account/API key to test the payment flow (`Payment.java`).
-4. Let Gradle sync, then build and run on an emulator or device (min SDK 24).
 
 ## Known limitations
 
